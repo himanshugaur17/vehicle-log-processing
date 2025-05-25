@@ -27,12 +27,26 @@ public class VehicleLogProcessingConfig {
     }
 
     @Bean
-    ObjectMapper objectMapper() {
+    public ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
         objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         return objectMapper;
+    }
+
+    @Bean
+    public ObjectMapper footballObjectMapper() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+        objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
+        objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        return objectMapper;
+    }
+
+    @Bean
+    public HttpClient footballHttpClient() {
+        return HttpClient.newHttpClient();
     }
 }
