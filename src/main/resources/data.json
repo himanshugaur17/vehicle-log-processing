@@ -1,0 +1,74 @@
+{
+  "record_id": "REC-XYZ-123",
+  "source": "onboard-diagnostic-II",
+  "log_entries": [
+    {
+      "event_id": "evt-001",
+      "device": {
+        "vehicle_id": 12345,
+        "model": "Motive-EV-Sedan"
+      },
+      "timestamp": "2024-05-23T10:00:00Z",
+      "event_type": "ENGINE_START",
+      "telemetry": {
+        "odometer": { "value": 50100, "unit": "km" },
+        "fuel": { "value": 85, "unit": "percent" },
+        "location": { "lat": 34.0522, "lon": -118.2437 }
+      },
+      "event_details": {
+        "system_check_status": "PASS"
+      }
+    },
+    {
+      "event_id": "evt-002",
+      "device": {
+        "vehicle_id": 67890,
+        "model": "Motive-Truck-Heavy"
+      },
+      "timestamp": "2024-05-23T10:05:00Z",
+      "event_type": "ENGINE_START",
+      "telemetry": {
+        "odometer": { "value": 75300, "unit": "km" },
+        "fuel": { "value": 92, "unit": "percent" },
+        "location": { "lat": 36.1699, "lon": -115.1398 }
+      },
+      "event_details": {
+        "system_check_status": "PASS"
+      }
+    },
+    {
+      "event_id": "evt-003",
+      "device": {
+        "vehicle_id": 12345,
+        "model": "Motive-EV-Sedan"
+      },
+      "timestamp": "2024-05-23T12:30:00Z",
+      "event_type": "ENGINE_STOP",
+      "telemetry": {
+        "odometer": { "value": 50250, "unit": "km" },
+        "fuel": { "value": 78, "unit": "percent" },
+        "location": { "lat": 34.0599, "lon": -118.2511 }
+      },
+      "event_details": {
+        "trip_duration_seconds": 9000
+      }
+    },
+    {
+      "event_id": "evt-004",
+      "device": {
+        "vehicle_id": 67890,
+        "model": "Motive-Truck-Heavy"
+      },
+      "timestamp": "2024-05-23T14:00:00Z",
+      "event_type": "ENGINE_STOP",
+      "telemetry": {
+        "odometer": { "value": 75450, "unit": "km" },
+        "fuel": { "value": 80, "unit": "percent" },
+        "location": { "lat": 36.175, "lon": -115.139 }
+      },
+      "event_details": {
+        "trip_duration_seconds": 14100
+      }
+    }
+  ]
+}
